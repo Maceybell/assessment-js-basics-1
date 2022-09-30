@@ -9,7 +9,7 @@
     It should be a string containing your best definition of what Git is.
 */
 
-//CODE HERE
+let gitDefinition = "Git is a source code tool used to manage code and to simplify collaboration on projects"
 
 //////////////////PROBLEM 2////////////////////
 /*
@@ -17,15 +17,17 @@
     It should be a string containing your best definition of what GitHub is.
 */
 
-//CODE HERE
+let gitHubDefinition = "GitHub hosts software development projects that can be stored, shared and collaborated on."
 
 //////////////////PROBLEM 3////////////////////
 /*
     Create a variable called 'gitInitDefinition'.  
     It should be a string containing your best definition of what 'git init' does.
-*/
+*/ 
 
-//CODE HERE
+let gitInitDefinition = "git init creates a new Git repository"
+
+
 
 //////////////////PROBLEM 4////////////////////
 /*
@@ -33,7 +35,7 @@
     It should be a string containing your best definition of what 'git clone' does.
 */
 
-//CODE HERE
+let gitClone = "git clone creates a copy of a repository in a new directory"
 
 //////////////////PROBLEM 5////////////////////
 /*
@@ -41,7 +43,7 @@
     It should be a string containing your best definition of what 'git status' does.
 */
 
-//CODE HERE
+let gitStatusDefinition = 'git status displays what directory you are in and the staging area.'
 
 //////////////////PROBLEM 6////////////////////
 /*
@@ -52,7 +54,7 @@
     It should be a string containing the code to add all files.
 */
 
-//CODE HERE
+let gitAddDefinition = "git add adds a change in the working directory to the staging area"
 
 //////////////////PROBLEM 7////////////////////
 /*
@@ -63,7 +65,7 @@
     It should be a string containing the code to commit using the message "initial commit".
 */
 
-//CODE HERE
+let gitCommitDefinition = "git commit tracks progress and changes"
 
 
 //////////////////PROBLEM 8////////////////////
@@ -72,4 +74,4 @@
     It should be a string containing your best definition of what 'git push' does.
 */
 
-//CODE HERE
+let gitPushDefinition = "git push uploads a local repository to a remote repository"
