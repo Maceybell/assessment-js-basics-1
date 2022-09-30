@@ -49,8 +49,13 @@ const pinkPrice = .55
     Log `totalAcres` to the console.
 */
 
-// CODE HERE
+let totalAcres= 0
+for (let i=0; i < fujiAcres.length; i++){
+    totalAcres += (fujiAcres[i] + galaAcres[i] + pinkAcres[i])
+}
 
+console.log(totalAcres)
+// I used a for loop that would run 7 times through because I set it equal to the length of fujiAcres which is 7, knowing that each array had a length of 7 due to 7 days of the week being accounted for for each type of apple. Instead of only looping through one array I used the += method AND added each array together. That way we are getting the sum of each array individually and then have them added to one another all in one function. 
 
 
 
@@ -67,7 +72,10 @@ const pinkPrice = .55
     Log `averageDailyAcres` to the console.
 */
 
-// CODE HERE
+let averageDailyAcres = totalAcres / 7
+console.log(averageDailyAcres)
+
+//since there are 7 days in a week, dividing the total number of acres by 7 results in the average of how many acres of apples per day
 
 
 
@@ -105,9 +113,13 @@ const pinkPrice = .55
 let acresLeft = 174 
 let days = 0
 
-// CODE HERE
+while (acresLeft > 0){
+    days+=1
+    acresLeft-=averageDailyAcres
+}
 
-
+console.log(days)
+// I used a while loop that, until there are no acres left, i day will be added to the days variable and averageDailyAcres will be subtracted from the averageDailyAcres variable. Since on average 9 acres are picked a day, it will take 20 days to pick 180 acres. When I console log acresLeft however it becomes -6 so I would want to add in an "if" statement that if acresLeft <= 0 it will console log zero instead. But in this case I just need to log days so I won't worry about doing that now. 
 
 // PROBLEM 4
 
@@ -135,14 +147,21 @@ let days = 0
 
 // CODE HERE
 
-// let fujiTons =
-// let galaTons =
-// let pinkTons =
+let fujiTons = fujiAcres.slice(0,7)
+let galaTons = galaAcres.slice(0,7)
+let pinkTons = pinkAcres.slice(0,7)
 
+for (let i=0; i<7; i++){
+    fujiTons[i]*=6.5;
+    galaTons[i]*=6.5;
+    pinkTons[i]*=6.5;
+}
 
+console.log(fujiTons)
+console.log(galaTons)
+console.log(pinkTons)
 
-
-
+//I basically made the Tons arrays equivalent to the Acres arrays. Then created a for loop that ran through each array and multiplies each value by 6.5. The arrays log to the console with the correct new values.
 
 // PROBLEM 5
 
@@ -161,11 +180,20 @@ let days = 0
 */
 
 // CODE HERE 
+let fujiPounds = 0
+let galaPounds= 0
+let pinkPounds = 0
+for (let i=0; i < fujiTons.length; i++){
+     fujiPounds += fujiTons[i]*2000;
+     galaPounds += galaTons[i]*2000;
+     pinkPounds += pinkTons[i]*2000}
 
-// let fujiPounds =
-// let galaPounds =
-// let pinkPounds =
 
+console.log(fujiPounds)
+console.log(galaPounds)
+console.log(pinkPounds)
+
+//I followed the same formula to convert tons to pounds as I did to find the total acres, but rather than adding the separate values of each indivudual fruit to one singular total I found respective totals for the week of each fruit in pounds. The correct values are logging to the console. 
 
 
 
@@ -189,9 +217,15 @@ let days = 0
 
 // CODE HERE
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
+let fujiProfit = (fujiPounds * .89)
+let galaProfit = (galaPounds * .64)
+let pinkProfit = (pinkPounds * .55)
+
+console.log(fujiProfit)
+console.log(galaProfit)
+console.log(pinkProfit)
+
+// I calculated weekly revenue per apple type by multiplying pounds sold of that apple by the price per pound.
 
 
 
@@ -208,4 +242,7 @@ let days = 0
     Log `totalProfit` to the console.
 */
 
-// CODE HERE
+let totalProfit = fujiProfit + galaProfit + pinkProfit
+console.log(totalProfit)
+
+// I added the profits of each type of apple together to find the total revenue.
